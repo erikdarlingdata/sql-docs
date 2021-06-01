@@ -50,7 +50,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 |-----------------|---------------|-----------------|  
 |**0**|**Unknown**|Unknown |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
-|**2**|**Worker Thread**|THREADPOOL|
+|**2**|**Worker Thread***|THREADPOOL|
 |**3**|**Lock**|LCK_M_%|
 |**4**|**Latch**|LATCH_%|
 |**5**|**Buffer Latch**|PAGELATCH_%|
@@ -73,7 +73,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||
 |**22**|**Replication**|SE_REPL_%, REPL_%, HADR_% **(but not HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
 |**23**|**Log Rate Governor**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
-\* Query Store tracks wait stats only during query *execution*, not during query *compilation*. This restricts Query Store's ability to track compilation wait stats.
+\* Query Store tracks wait stats only during query *execution*, not during query *compilation*. This restricts Query Store's ability to track pre-compilation (THREADPOOL) and compilation (RESOURCE_SEMAPHORE_QUERY_COMPILE) wait stats.
 
 ## Permissions
 
